@@ -15,4 +15,4 @@ Com o comando 'ip a', descobrimos o o IP address. Então, use o cmd do linux nor
 ssh alexfidalgo@192.168.122.255
 
 aula 3
-2h13
+2h29
