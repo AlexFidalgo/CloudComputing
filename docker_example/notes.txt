@@ -1,0 +1,75 @@
+
+### Creates Dockerfile
+
+# Use the official Nginx base image from the Docker Hub
+FROM nginx:latest
+
+# Copy the static HTML file to the Nginx web server directory
+COPY index.html /usr/share/nginx/html/
+
+# Expose port 80 to the host
+EXPOSE 80
+
+# Start Nginx when the container launches
+CMD ["nginx", "-g", "daemon off;"]
+
+
+
+### Creates index.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Nginx!</title>
+</head>
+<body>
+    <h1>Hello, Docker!</h1>
+    <p>This is a simple Nginx web server running inside a Docker container.</p>
+</body>
+</html>
+
+
+### Builds image
+docker build -t my-nginx-image .
+
+Now, the image is stored locally on your Docker host in the Docker daemon's local image registry. You can view the list of all locally stored Docker images by using the 'docker images' command.
+
+### Creating and Starting the container
+docker run -d -p 8080:80 --name my-nginx-container my-nginx-image
+
+alex@alex-inspiron:~/Documents/Projects/CloudComputing/docker_example$ sudo docker run -d -p 8080:80 --name my-nginx-container my-nginx-image
+ca7057b3a32a8ecebc970ac61439cea51204bf2e756b08814babb71d6e1dd95e
+
+This output is the Container ID of the newly created and running Docker container. This indicates that the container has been successfully started.
+
+'sudo docker ps'
+This will show you all currently running containers. 
+
+### Accessing the Nginx Web Server
+
+Open a web browser and go to `http://localhost:8080`. You should see the HTML page you created (e.g., "Hello, Docker!"). This confirms that the Nginx web server inside your Docker container is running and accessible.
+
+
+### Stop the Container
+
+To stop the running container, use the `docker stop` command followed by the container name or ID:
+
+```sh
+sudo docker stop my-nginx-container
+```
+
+### Remove the Container
+
+Once the container is stopped, you can remove it using the `docker rm` command:
+
+```sh
+sudo docker rm my-nginx-container
+```
+
+### Verify the Container is Removed
+
+To ensure the container has been removed, you can list all containers, including those that are stopped, using the `docker ps -a` command:
+
+```sh
+sudo docker ps -a
+```
