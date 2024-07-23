@@ -1,0 +1,27 @@
+alexfidalgo
+02223031
+
+Choose Memory and CPU settings:
+Memory: 2048
+CPUs: 2
+Create a disk image for the virtual machine:
+15.0 GiB
+
+Network selection:
+NAT
+
+Você pode logar pela internet na VM usando o cm do seu linux normal.
+Com o comando 'ip a', descobrimos o o IP address. Então, use o cmd do linux normal e digite 
+ssh alexfidalgo@192.168.122.255
+
+alex@alex-inspiron:~/Documents/Projects/CloudComputing/ContainersAndImagesPractice/aws3_3$ aws configure
+AWS Access Key ID: AKIARLRNVGMAFI73TQCH
+AWS Secret Access Key: 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
+Default region name: sa-east-1
+Default output format: json
+
+AWS
+Account ID: 093511299840
+Account name: alex
+
+**build:**
