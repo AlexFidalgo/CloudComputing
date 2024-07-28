@@ -1,5 +1,11 @@
-AULA 4
-35 min
+AWS Academy Cloud Foundations [85919]
+MÓDULO 2 - 
+
+ AWS Academy Learner Lab [85940] 
+Iniciar os laboratórios de aprendizagem da AWS Academy
+
+ Aula 5
+
 
 alexfidalgo
 02223031
