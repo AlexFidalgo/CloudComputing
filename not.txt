@@ -1,7 +1,7 @@
 AWS Academy Cloud Foundations [85919]
 MÓDULO 2 - 
 
- AWS Academy Learner Lab [85940] 
+AWS Academy Learner Lab [85940] (para uso mais livre, orçamento de $100)
 Iniciar os laboratórios de aprendizagem da AWS Academy
 
  Aula 5
