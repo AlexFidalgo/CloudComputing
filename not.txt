@@ -4,7 +4,7 @@ MÓDULO 2 -
 AWS Academy Learner Lab [85940] (para uso mais livre, orçamento de $100)
 Iniciar os laboratórios de aprendizagem da AWS Academy
 
- Aula 5
+Aula 5
 
 
 alexfidalgo
