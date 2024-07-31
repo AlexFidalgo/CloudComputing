@@ -1,12 +1,13 @@
 AWS Academy Cloud Foundations [85919]
-MÓDULO 2 - Demonstração - Painel de cobrança
+MÓDULO 4 - seção 2: aws IAM
 
 AWS Academy Learner Lab [85940] (para uso mais livre, orçamento de $100)
 Iniciar os laboratórios de aprendizagem da AWS Academy
 
-Aula 5
-https://www.youtube.com/watch?v=CE645003sGk
-1h34
+Aula 6
+https://www.youtube.com/watch?v=IF5gBf8EZ_g
+27 min
+
 
 alexfidalgo
 02223031
