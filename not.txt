@@ -14,7 +14,7 @@ alexfidalgo
 
 Você pode logar pela internet na VM usando o cm do seu linux normal.
 Com o comando 'ip a', descobrimos o o IP address. Então, use o cmd do linux normal e digite 
-ssh alexfidalgo@192.168.122.255
+ssh alexfidalgo@192.168.122.55
 
 alex@alex-inspiron:~/Documents/Projects/CloudComputing/ContainersAndImagesPractice/aws3_3$ aws configure
 AWS Access Key ID: AKIARLRNVGMAFI73TQCH
