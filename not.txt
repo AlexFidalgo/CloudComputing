@@ -1,5 +1,5 @@
 AWS Academy Cloud Foundations [85919]
-Laboratório 1 - Introdução ao IAM
+Módulo 5
 
 AWS Academy Learner Lab [85940] (para uso mais livre, orçamento de $100)
 Iniciar os laboratórios de aprendizagem da AWS Academy
