@@ -1,8 +1,8 @@
 AWS Academy Cloud Foundations [85919]
-Módulo 5
+Módulo 5 - Demonstração Amazon VPC
 
-AWS Academy Learner Lab [85940] (para uso mais livre, orçamento de $100)
-Iniciar os laboratórios de aprendizagem da AWS Academy
+Learner Lab
+https://awsacademy.instructure.com/courses/85940/modules/items/7812386
 
 Aula 6
 https://www.youtube.com/watch?v=IF5gBf8EZ_g
