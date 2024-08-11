@@ -30,7 +30,7 @@ def parse_data(filename):
     return pd.DataFrame(data, columns=['CPU Utilization', 'Replicas'])
 
 # Read and parse the data
-data = parse_data('results_local_2nodes.txt')
+data = parse_data('results_local_2nodes_III.txt')
 
 # Add a time column
 data['Time'] = range(len(data))
@@ -56,6 +56,6 @@ fig.tight_layout()  # Adjust layout to prevent label overlap
 plt.grid(True)
 
 # Save the plot as a PNG file
-plt.savefig('cpu_replicas_plot.png')
+plt.savefig('cpu_replicas_plot_III.png')
 
 plt.show()
