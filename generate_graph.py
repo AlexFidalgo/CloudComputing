@@ -29,33 +29,40 @@ def parse_data(filename):
 
     return pd.DataFrame(data, columns=['CPU Utilization', 'Replicas'])
 
-# Read and parse the data
-data = parse_data('results_local_2nodes_III.txt')
+def generate_graph(input, output, title):
 
-# Add a time column
-data['Time'] = range(len(data))
+    # Read and parse the data
+    data = parse_data(input)
 
-# Plotting
-fig, ax1 = plt.subplots(figsize=(12, 6))
+    # Add a time column representing 30-second intervals
+    data['Time (seconds)'] = data.index * 30
 
-# Plot CPU Utilization on the primary y-axis
-ax1.plot(data['Time'], data['CPU Utilization'], label='CPU Utilization (%)', color='b')
-ax1.set_xlabel('Time (minutes)')
-ax1.set_ylabel('CPU Utilization (%)', color='b')
-ax1.tick_params(axis='y', labelcolor='b')
+    # Plotting
+    fig, ax1 = plt.subplots(figsize=(12, 6))
 
-# Create a secondary y-axis for Replicas
-ax2 = ax1.twinx()
-ax2.plot(data['Time'], data['Replicas'], label='Replicas', linestyle='--', color='g')
-ax2.set_ylabel('Replicas', color='g')
-ax2.tick_params(axis='y', labelcolor='g')
+    # Plot CPU Utilization on the primary y-axis
+    ax1.plot(data['Time (seconds)'], data['CPU Utilization'], label='CPU Utilization (%)', color='b')
+    ax1.set_xlabel('Time (seconds)')
+    ax1.set_ylabel('CPU Utilization (%)', color='b')
+    ax1.tick_params(axis='y', labelcolor='b')
 
-# Title and grid
-plt.title('CPU Utilization and Replicas Over Time')
-fig.tight_layout()  # Adjust layout to prevent label overlap
-plt.grid(True)
+    # Create a secondary y-axis for Replicas
+    ax2 = ax1.twinx()
+    ax2.plot(data['Time (seconds)'], data['Replicas'], label='Replicas', linestyle='--', color='g')
+    ax2.set_ylabel('Replicas', color='g')
+    ax2.tick_params(axis='y', labelcolor='g')
 
-# Save the plot as a PNG file
-plt.savefig('cpu_replicas_plot_III.png')
+    # Title and grid
+    plt.title('CPU Utilization and Replicas Over Time - '+ title )
+    fig.tight_layout()  # Adjust layout to prevent label overlap
+    plt.grid(True)
 
-plt.show()
+    # Save the plot as a PNG file
+    plt.savefig(output)
+
+    # plt.show()
+
+
+generate_graph("estudo_do_retorno_1.txt", "estudo_retorno.png", "")
+generate_graph("estudo_do_retorno_2.txt", "estudo_retorno2.png", "")
+
