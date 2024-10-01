@@ -28,7 +28,7 @@ Resources:
   ItemLambdaFunction:
     Type: AWS::Lambda::Function
     Properties:
-      Runtime: nodejs18.x
+      Runtime: nodejs16.x
       Role: !GetAtt ItemFunctionExecutionRole.Arn
       Handler: index.handler
       Code:
