@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Resource Calculator</title>
+    <!-- Styling for the client UI -->
+    <style>
+    h1 {
+        color: #FFFFFF;
+        font-family: system-ui;
+        margin-left: 20px;
+    }
+    body {
+        background-color: #222629;
+    }
+    label {
+        color: #86C232;
+        font-family: system-ui;
+        font-size: 20px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    button {
+        background-color: #86C232;
+        border-color: #86C232;
+        color: #FFFFFF;
+        font-family: system-ui;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 30px;
+        margin-top: 20px;
+        width: 140px;
+    }
+    input {
+        color: #222629;
+        font-family: system-ui;
+        font-size: 20px;
+        margin-left: 10px;
+        margin-top: 20px;
+        width: 100px;
+    }
+    </style>
+    <script>
+        // callAPI function that takes the number of users as input
+        var callAPI = (users) => {
+            // instantiate a headers object
+            var myHeaders = new Headers();
+            // add content type header to object
+            myHeaders.append("Content-Type", "application/json");
+            // using built-in JSON utility package to turn object to string and store in a variable
+            var raw = JSON.stringify({ "users": users });
+            // create a JSON object with parameters for API call and store in a variable
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+            // make API call with parameters and use promises to get the response
+            fetch("https://wdmhkfiyub.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
+            .then(response => response.text())
+            .then(result => alert(JSON.parse(result).body)) // showing result using alert
+            .catch(error => console.log('error', error));
+        }
+    </script>
+</head>
+<body>
+    <h1>CLOUD RESOURCE CALCULATOR</h1>
+    <form>
+        <label>Number of Users:</label>
+        <input type="number" id="users">
+        <!-- set button onClick method to call function we defined passing input values as parameters -->
+        <button type="button" onclick="callAPI(document.getElementById('users').value)">CALCULATE</button>
+    </form>
+</body>
+</html>
